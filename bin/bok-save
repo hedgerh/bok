@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var save = require('../lib/save')
+
+program
+  .version('0.0.1')
+  .option('-l, --location', 'provide location of local repo to save', '.')
+  .action(save)
+  .parse(process.argv)

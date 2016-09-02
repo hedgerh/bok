@@ -1,0 +1,23 @@
+{
+  "name": "bok-cli",
+  "version": "0.0.1",
+  "description": "npm init style projeccts",
+  "bin": {
+    "bok": "./bin/bok.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harry Hedger",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "git+https://github.com/tj/commander.js.git",
+    "configstore": "^2.1.0",
+    "fs-extra": "^0.30.0",
+    "nodegit": "^0.14.1",
+    "octonode": "^0.7.6",
+    "prompt": "^1.0.0",
+    "request": "^2.74.0",
+    "tar.gz": "^1.0.5"
+  }
+}

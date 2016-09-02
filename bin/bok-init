@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var init = require('../lib/init')
+
+program
+  .version('0.0.1')
+  .option('-t, --template', 'specify project template', 'default')
+  .action(init)
+  .parse(process.argv);

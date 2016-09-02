@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var listTemplates = require('../lib/templates').listTemplates
+
+program
+  .version('0.0.1')
+  .action(listTemplates)
+  .parse(process.argv)

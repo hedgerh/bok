@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+
+program
+  .version('0.0.1')
+  .command('list', 'list templates').alias('ls')
+  .command('init <name>', 'init new project').alias('i')
+  .command('get <name>', 'get a template url').alias('g')
+  .command('set <name> <url>', 'set a template url')
+  .command('save <name>', 'save a local repo as template')
+  .command('add <name> <url>', 'add a template').alias('a')
+  .command('remove <name>', 'remove a template').alias('rm')
+  .command('config', 'configure options')
+  .command('edit', 'edit config file directly')
+  .parse(process.argv)
+

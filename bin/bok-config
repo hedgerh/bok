@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var handlers = require('../lib/options')
+
+var getOption = handlers.getOption
+var setOption = handlers.setOption
+var deleteOption = handlers.deleteOption
+var listOptions = handlers.listOptions
+
+program
+  .version('0.0.1')
+
+program
+  .command('get')
+  .arguments('<key>')
+  .description('get config option')
+  .action(getOption)
+
+program
+  .command('set')
+  .arguments('<key> <value>')
+  .description('set config option')
+  .action(setOption)
+
+program
+  .command('delete')
+  .arguments('<key>')
+  .description('delete config option')
+  .action(deleteOption)
+
+program
+  .command('list')
+  .description('list config options')
+  .action(listOptions)
+  .alias('ls')
+
+program.parse(process.argv);

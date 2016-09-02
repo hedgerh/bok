@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var removeTemplate = require('../lib/templates').removeTemplate
+
+program
+  .version('0.0.1')
+  .action(removeTemplate)
+  .parse(process.argv)
